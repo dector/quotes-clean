@@ -1,8 +1,9 @@
 package io.github.dector.quotes.storage
 
+import com.nhaarman.mockito_kotlin.mock
+import com.nhaarman.mockito_kotlin.whenever
 import io.github.dector.quotes.domain.Quote
 import org.mockito.Mockito.*
-import org.testng.Assert
 import org.testng.Assert.assertEquals
 import org.testng.annotations.AfterTest
 import org.testng.annotations.BeforeTest
@@ -29,7 +30,3 @@ class DataSourceTest {
         assertEquals(dataSource.count(), 100)
     }
 }
-
-inline fun <reified T : Any> mock() = mock(T::class.java)
-
-fun <T> whenever(methodCall: T) = `when`(methodCall)
