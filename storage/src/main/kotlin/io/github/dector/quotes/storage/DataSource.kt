@@ -4,5 +4,5 @@ interface DataSource<Data> {
 
     fun count(): Long
 
-    fun get(): Data
+    fun get(request: DataRequest): Data
 }
